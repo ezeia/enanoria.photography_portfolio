@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photography Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Photography Portfolio</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Filter by search...">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="Beach">Beach</button>
+                <button class="filter-btn" data-filter="Violin">Violin</button>
+                <button class="filter-btn" data-filter="Guitar">Guitar</button>
+            </div>
+        </div>
+        
+        <div class="gallery" id="gallery"></div>
+        
+        <div class="form-container">
+            <h2>Add a New Image</h2>
+            <form id="addForm">
+                <div class="input-group">
+                    <label for="imgUrl">Image URL</label>
+                    <input type="text" id="imgUrl" required>
+                </div>
+                <div class="input-group">
+                    <label for="imgCaption">Caption</label>
+                    <input type="text" id="imgCaption" required>
+                </div>
+                <div class="input-group">
+                    <label for="imgCategory">Category</label>
+                    <select id="imgCategory">
+                        <option value="Beach">Beach</option>
+                        <option value="Violin">Violin</option>
+                        <option value="Guitar">Guitar</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Add Image</button>
+            </form>
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img id="lightboxImg" src="" alt="Lightbox Image">
+        <p id="lightboxCaption"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
